@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Library</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main2.css' %}">
+
+    <style>
+        body{
+            background-image: url("{% static 'images/blueabstract.jpg' %}");
+        } 
+    </style>
+</head>
+<body>
+
+<br>
+<form action="library/search" method="post">
+    {% csrf_token %}
+    <input name="searchField" type="text" placeholder="Search for any songs....">
+    <input id="subbtn" type="submit" value="Search">
+</form>
+<br>
+<h2 id = "recommended" class="recommended" data-name="{{recommended.name}}" data-item="{{recommended.item}}" >Recommended for you : {{recommended.name}}</h2>
+<p>
+    {% for m in messages %}
+    {{m}}
+
+    {% endfor %}
+</p>
+
+<br>
+
+{% for object in mega_list %}
+
+<a href="/library/getmedia/?it={{object.item}}" target="_self">
+
+    <div name="{{object.item}}" class="song" label="box" >
+        Name : {{object.name}} <br>
+        Type : mp3
+    </div>
+</a>
+
+
+{% endfor %}
+</body>
+<script src="{% static 'script.js' %}"></script>
+</html>

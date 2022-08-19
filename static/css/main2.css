@@ -1,0 +1,35 @@
+@keyframes marquee {
+    from{
+    left: 250px;
+    }
+    to{
+        left: -350px;
+    }
+    
+}
+
+input {
+    margin-left:  300px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+#subbtn {
+    margin-left: 100px;
+}
+.recommended {
+    color: gray;
+    position: relative;
+    left : 250px ;
+}
+
+.marquee {
+    
+    color: rgb(163, 188, 96);
+    position :relative;
+    animation-name: marquee;
+    animation-duration: 17s;
+    animation-timing-function : linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}

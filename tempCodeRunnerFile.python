@@ -1,0 +1,18 @@
+import _json
+import json
+
+import os
+
+files = os.listdir("/Users/Srujan/Music")
+objlist=[]
+for file in files :
+    p1 = file[0:29] + "..."
+    item_us = file
+    item_us = item_us.replace(" ","_")
+    item_us = item_us.replace("(","")
+    item_us = item_us.replace(")","")
+    objlist.append((file,p1,item_us))
+
+with open("data.json","w") as f :
+
+    json.dump(objlist,f)
