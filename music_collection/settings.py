@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)m3z=(ztt=104f=toiyssyqs&@9@g!skrxiyb0)h-vjrm44c%2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["djangoproject.localhost" , "127.0.0.1"]
+ALLOWED_HOSTS = ["djangoproject.localhost" , "127.0.0.1","audiolibraryforthetechyfolks.herokuapp.com/"]
 
 # STATICFILES_DIRS=[
 # "/Users/Srujan/Documents/Django/music_collection/static"
