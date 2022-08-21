@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)m3z=(ztt=104f=toiyssyqs&@9@g!skrxiyb0)h-vjrm44c%2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["djangoproject.localhost" , "127.0.0.1","audiolibraryforthetechyfolks.herokuapp.com"]
 
@@ -136,7 +136,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_DIRS = None
+STATICFILES_DIRS = []
 # django_heroku.settings(locals())
 
 # Default primary key field type
