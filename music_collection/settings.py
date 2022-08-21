@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,13 +83,23 @@ WSGI_APPLICATION = 'music_collection.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME' : "sathvik" ,
-        "USER" : "postgres" ,
-        "PASSWORD" : "pass1",
-        "HOST" : "localhost"
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME' : "depnd2c1uas1ad" ,
+        "USER" : "hsimzpzvwswmhe" ,
+        "PASSWORD" : "26738944ae7c56b25a03ac85ad22a672d8448d70a6c06fbb5c48453da324c57d",
+        "HOST" : "ec2-54-152-28-9.compute-1.amazonaws.com",
+        "PORT" : 5432
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME' : "sathvik" ,
+#         "USER" : "postgres" ,
+#         "PASSWORD" : "pass1",
+#         "HOST" : "localhost"
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -126,6 +137,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR,"static/")
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
